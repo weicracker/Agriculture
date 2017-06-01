@@ -1,0 +1,14 @@
+{
+  "name": "Agriculture",
+  "version": "1.0.0",
+  "description": "react native web",
+  "main": "index.js",
+  "repository": "git@github.com:weicracker/Agriculture.git",
+  "author": "jiwei <jiwei3778@bjsasc.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-native-web": "^0.0.95"
+  }
+}
