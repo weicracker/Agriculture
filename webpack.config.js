@@ -34,7 +34,7 @@ module.exports = {
         "react-dom": "ReactDOM"
     },
     devServer: {
-        contentBase: "./dist/",
+        contentBase: "./",
         compress: true,
         port: 9000,
         historyApiFallback: true,
