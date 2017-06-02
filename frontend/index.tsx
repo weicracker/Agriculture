@@ -1,9 +1,7 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import App from './hello';
+import { AppRegistry } from 'react-native';
 
-import { Hello } from "./Hello";
-
-ReactDOM.render(
-    <Hello compiler="typescript" framework="React" />,
-    document.getElementById("root")
-);
+// rendering (using ReactDOM.render also works)
+const rootTag = document.getElementById('react-root');
+AppRegistry.registerComponent('App', () => App);
+AppRegistry.runApplication('App', { rootTag });

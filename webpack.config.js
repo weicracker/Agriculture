@@ -9,7 +9,10 @@ module.exports = {
     },
     devtool: "eval-source-map",
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".json",".html"]
+        alias: {
+            'react-native': 'react-native-web'
+        },
+        extensions: [".ts", ".tsx", ".js", ".json", ".html"]
     },
     module: {
         loaders: [{
@@ -27,8 +30,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: __dirname + "/frontend/index.tmpl.html" //new 一个这个插件的实例，并传入相关的参数
         }),
-        new webpack.HotModuleReplacementPlugin()//热加载插件
+        new webpack.HotModuleReplacementPlugin() //热加载插件
     ],
+   
     externals: {
         "react": "React",
         "react-dom": "ReactDOM"
@@ -39,6 +43,6 @@ module.exports = {
         port: 9000,
         historyApiFallback: true,
         inline: true,
-        hot:true
+        hot: true
     }
 };

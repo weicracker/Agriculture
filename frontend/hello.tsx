@@ -1,11 +1,46 @@
-import * as React from "react";
+import * as React from 'react';
+import {
+    // apis
+    Animated,
+    AppState,
+    AsyncStorage,
+    Clipboard,
+    Dimensions,
+    I18nManager,
+    NetInfo,
+    PanResponder,
+    PixelRatio,
+    StyleSheet,
+    // components
+    ActivityIndicator,
+    Button,
+    Image,
+    ProgressBar,
+    ScollView,
+    Switch,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    TouchableHighlight,
+    TouchableWithoutFeedback,
+    View
+} from 'react-native';
 
-export interface HelloProps { compiler: string; framework: string; }
-
-// 'HelloProps' describes the shape of props.
-// State is never set so we use the 'undefined' type.
-export class Hello extends React.Component<HelloProps, undefined> {
+export default class App extends React.Component {
     render() {
-        return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
+        return (
+            <View style={styles.container}>
+                <Text>React Native for Web</Text>
+            </View>
+        );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5FCFF'
+    }
+});
