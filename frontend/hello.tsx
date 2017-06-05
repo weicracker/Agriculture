@@ -31,13 +31,20 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5FCFF'
     }
 });
-class App extends React.Component<any,undefined>{
+class App extends React.Component<any, undefined>{
     render() {
         return (
             <View style={styles.container}>
                 <Text>React Native for Web</Text>
+                <Button
+                    accessibilityLabel="Learn more about this purple button"
+                    color="#841584"
+                    onPress={onPressLearnMore}
+                    title="Learn More"
+                />
             </View>
         );
     }
 }
+const onPressLearnMore =()=>{}
 export default App;
