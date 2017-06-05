@@ -15,8 +15,6 @@ import {
     ActivityIndicator,
     Button,
     Image,
-    ProgressBar,
-    ScollView,
     Switch,
     Text,
     TextInput,
@@ -25,17 +23,6 @@ import {
     TouchableWithoutFeedback,
     View
 } from 'react-native';
-
-export default class App extends React.Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>React Native for Web</Text>
-            </View>
-        );
-    }
-}
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -44,3 +31,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5FCFF'
     }
 });
+class App extends React.Component<any,undefined>{
+    render() {
+        return (
+            <View style={styles.container}>
+                <Text>React Native for Web</Text>
+            </View>
+        );
+    }
+}
+export default App;
