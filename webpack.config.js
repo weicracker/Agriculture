@@ -12,7 +12,7 @@ module.exports = {
         alias: {
             'react-native': 'react-native-web'
         },
-        extensions: [".ts", ".tsx", ".js", ".json", ".html"]
+        extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },
     module: {
         loaders: [{
@@ -32,7 +32,7 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin() //热加载插件
     ],
-   
+
     externals: {
         "react": "React",
         "react-dom": "ReactDOM"

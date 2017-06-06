@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Header from './compontent/header/header';
 import {
     // apis
     Animated,
@@ -35,16 +36,12 @@ class App extends React.Component<any, undefined>{
     render() {
         return (
             <View style={styles.container}>
+                <Header name = "aaaa">
+                    
+                </Header>
                 <Text>React Native for Web</Text>
-                <Button
-                    accessibilityLabel="Learn more about this purple button"
-                    color="#841584"
-                    onPress={onPressLearnMore}
-                    title="Learn More"
-                />
             </View>
         );
     }
 }
-const onPressLearnMore =()=>{}
 export default App;
