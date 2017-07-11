@@ -2,16 +2,16 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: "./frontend/index.tsx",
+    entry: {
+        "app":"./frontend/index.tsx",
+        "verdor":["react","react-dom"]
+    },
     output: {
         filename: "app-[hash].bundle.js",
         path: __dirname + "/dist"
     },
     devtool: "eval-source-map",
     resolve: {
-        alias: {
-            'react-native': 'react-native-web'
-        },
         extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },
     module: {
@@ -27,16 +27,15 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name:"verdor",
+            filename:"verdor.bundle.js"
+        }),
         new HtmlWebpackPlugin({
             template: __dirname + "/frontend/index.tmpl.html" //new 一个这个插件的实例，并传入相关的参数
         }),
         new webpack.HotModuleReplacementPlugin() //热加载插件
     ],
-
-    externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
-    },
     devServer: {
         contentBase: "./",
         compress: true,

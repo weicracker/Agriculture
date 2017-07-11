@@ -1,6 +1,11 @@
-import App from './hello';
-import { AppRegistry } from 'react-native';
+import { WingBlank, WhiteSpace } from 'antd-mobile';
+import * as ReactDOM from "react-dom";
+import * as React from 'react';
 
-const rootTag = document.getElementById('react-root');
-AppRegistry.registerComponent('App', () => App);
-AppRegistry.runApplication('App', { rootTag });
+class WingBlankExample extends React.Component<any,any>{
+    render(){
+        return(<div>222222</div>)
+    }
+}
+
+ReactDOM.render(<WingBlankExample />,document.getElementById("react-root"));

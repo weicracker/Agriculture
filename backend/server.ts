@@ -3,7 +3,6 @@ import * as Router from 'koa-router';
 import * as path from 'path';
 
 import bodyParser = require('koa-bodyparser');
-import hbs = require('koa-hbs');
 
 const PORT = process.env.PORT || 8020;
 const VIEWS_PATH = path.resolve(__dirname, 'views');
@@ -20,11 +19,6 @@ router.get('/', async ctx => {
 
 app
     .use(bodyParser())
-    .use(hbs.middleware({
-        defaultLayout: DEFAULT_LAYOUT,
-        layoutsPath: LAYOUTS_PATH,
-        viewPath: VIEWS_PATH
-    }))
     .use(router.routes())
     .listen(PORT);
 

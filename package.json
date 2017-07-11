@@ -4,30 +4,27 @@
   "description": "react native web",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --config webpack.config.frontend.js "
   },
   "repository": "git@github.com:weicracker/Agriculture.git",
   "author": "jiwei <jiwei3778@bjsasc.com>",
   "license": "MIT",
   "dependencies": {
-    "@types/koa-bodyparser": "^3.0.23",
-    "@types/koa-hbs": "^1.0.2",
     "antd-mobile": "^1.1.3",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.2.0",
     "koa-hbs": "^0.9.0",
     "koa-router": "^7.2.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-native-web": "^0.0.95"
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "@types/koa": "^2.0.39",
     "@types/koa-router": "^7.0.22",
+    "@types/koa-bodyparser": "^3.0.23",
     "@types/node": "^7.0.31",
     "@types/react": "^15.0.25",
     "@types/react-dom": "^15.5.0",
-    "@types/react-native": "^0.44.8",
     "html-webpack-plugin": "^2.28.0",
     "source-map-loader": "^0.2.1",
     "ts-loader": "^2.1.0",
